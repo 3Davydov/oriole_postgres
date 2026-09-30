@@ -20684,7 +20684,7 @@ AttachPartitionEnsureIndexes(List **wqueue, Relation rel, Relation attachrel)
 	ListCell   *cell;
 	MemoryContext cxt;
 	MemoryContext oldcxt;
-	AttrMap    *attmap;
+	AttrMap    *attmap = NULL;
 
 	cxt = AllocSetContextCreate(CurrentMemoryContext,
 								"AttachPartitionEnsureIndexes",
